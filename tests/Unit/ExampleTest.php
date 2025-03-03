@@ -1,18 +1,8 @@
 <?php
 
 declare(strict_types=1);
+uses(Illuminate\Foundation\Testing\RefreshDatabase::class);
 
-namespace Tests\Unit;
-
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
-
-final class ExampleTest extends TestCase
-{
-    use RefreshDatabase;
-
-    public function test_that_true_is_true(): void
-    {
-        $this->assertTrue(true);
-    }
-}
+test('that true is true', function (): void {
+    expect(true)->toBeTrue();
+});
